@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+h1
+{
+    margin-bottom: 40px;
+    padding-top: 40px;
+    color: #58c13a;
+}
+
+.page
+{
+    background-color: #737373;
+    text-align: center;
+
+}
+
+.content {
+    display: flex;
+}
+
+.picture
+{
+  margin-bottom: 0px;
+}
+
+h2{
+    margin-bottom: 0px;
+    padding: 0px;    
+}
+
+li {
+    display: inline;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  li {
+    float: left;
+  }
+
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+  
+  /* Change the link color on hover */
+  li a:hover {
+    background-color: #555;
+    color: rgb(243, 169, 9);
+  }
+
+  .active {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+p{
+    margin-top: 30px;
+    padding-bottom: 31px;
+    color: white;
+    font-size: large;
+}
+
+a{
+    background-color: #e68a00;
+}
+
+
+a:hover{
+    background-color: #cc7a00;
+    text-decoration: underline;
+    color: #0000ff;
+}
+
+a:active{
+    background-color: blue;
+    color: darkgoldenrod;
+}
+
+.header {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    
+    width: 100%;
+    background: #555555;
+  }
+  
+  .menu > li {
+    display: inline;
+    margin-right: 50px;
+  }
+  
+  .menu > li:last-of-type {
+    margin-right: 0;
+  }
+
+  .dropdown:hover .features-menu {
+    display: flex;
+    flex-direction: column;
+    background: ;
+    border-radius: 5px;
+    padding-top: 60px;
+  
+    position: absolute;      /* Add these */
+    top: 0px;
+    left: 0px;
+  }
+
+  .dropdown > span {
+    z-index: 2;
+    position: relative;  /* This is important! */
+    cursor: pointer;
+  }
+  .features-menu {                    /* Add this as a new rule */
+    display: none;
+  }
+  
