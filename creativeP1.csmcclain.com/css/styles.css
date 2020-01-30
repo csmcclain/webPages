@@ -1,4 +1,7 @@
 .pageBody
 {
     background-image: url("~/images/books.jpg");
+    background-position: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
