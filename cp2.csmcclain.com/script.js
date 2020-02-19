@@ -12,8 +12,25 @@ function getCharacters(e)
     let ministryOfMagics = document.getElementById('ministryOfMagic').checked;
 
     //setup url
-    let url = 'https://www.potterapi.com/v1/characters?key=$2a$10$e2vvEKONEi4fdC.ROuFEMOdwu4xG3VEjR.S9URLPsNero/Fanpasy';
     debugger;
+    let url = 'https://www.potterapi.com/v1/characters?key=$2a$10$e2vvEKONEi4fdC.ROuFEMOdwu4xG3VEjR.S9URLPsNero/Fanpasy';
+    url += '&house=' + hogwartsHouse;
+    if (deathEaters)
+    {
+      url += '&deathEater=true';
+    }
+    if (dumbledoresArmys)
+    {
+      url += '&dumbledoresArmy=true';
+    }
+    if (orderOfThePhoenixs)
+    {
+      url += '&orderOfThePhoenix=true';
+    }
+    if (ministryOfMagics)
+    {
+      url += '&ministryOfMagic=true';
+    }
     console.log(url);
     fetch(url)
     .then(function(response) 
@@ -29,8 +46,18 @@ function getCharacters(e)
     }).then(function(json) 
     {
       let results = "";
-      results += "<h1>";
-          
+      results += "<h1>Harry Potter " + hogwartsHouse + " Characters</h1>";
+      results += "<ul>";
+      let size = Object.keys(json).length;
+
+      for(let i = 0; i < size; i++)
+      {
+        results += "<li>" + json[i].name + ", " + json[i].house + ", " + json[i].bloodStatus + "</li>";
+      }
+      
+      console.log(results);
+      document.getElementById("results").innerHTML = results;
+
     });
 }
 
