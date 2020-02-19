@@ -1,5 +1,36 @@
 body
 {
     background-image: url("http://getwallpapers.com/wallpaper/full/6/8/e/123738.jpg");
+    background-position: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
 
+form
+{
+    display: block;
+    background-color: white;
+    background: rgba(255, 255, 255, .8);
+    font-family: cursive;
+    margin: 5% 25% 5% 25%;
+    font-size: larger;
+    padding: .5%;
+    list-style-type: none;
+}
+
+fieldset
+{
+    padding-left: 2%;
+}
+
+.daFuzz
+{
+    text-align: left;
+}
+
+button
+{
+    background-color: #0078e7;
+    color: #fff;
 }
